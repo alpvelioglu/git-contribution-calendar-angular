@@ -49,6 +49,7 @@ export class ProviderAuthDialogComponent {
 
   username = model<string>('');
   bitbucketTokenPage = computed(() => `${this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl() }/plugins/servlet/access-tokens/users/${this.username()}/manage`);
+  baseUrlConfig = computed(() => this.configService.set(Providers.Bitbucket, this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl()));
 
   githubService = inject(GithubService);
   bitbucketService = inject(BitbucketService);
