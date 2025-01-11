@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    @apply bg-gradient-to-br from-customGray to-customWhite text-black;
+  }
+  
+:root.dark {
+@apply bg-gray-800 text-white;
+}
+
+.snowflakes {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 9999;
+    pointer-events:none;
+  }
+  .snowflake {
+    color: #dc1212;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+    flex: 1;
+    position: relative;
+    top: -10%;
+    animation: snowflakes-fall 10s linear, snowflakes-shake 3s ease-in-out;
+    animation-delay: var(--d);
+    animation-iteration-count: infinite;
+  }
+  @keyframes snowflakes-fall {
+    100% {
+      top: 100%;
+    }
+  }
+  @keyframes snowflakes-shake {
+    50% {
+      transform: translateX(80px);
+    }
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

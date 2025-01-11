@@ -1,0 +1,18 @@
+.warn-badge {
+    background-color: #ffcc00;
+    border: 1px solid #ff9900;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.info-badge {
+    background-color: #cce5ff;
+    border: 1px solid #80bdff;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.mat-card-title {
+    font-weight: bold;
+}
+.mat-body-1 {
+    margin-top: 0;
+}

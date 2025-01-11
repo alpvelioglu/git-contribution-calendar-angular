@@ -1,0 +1,52 @@
+<div class="share-bottom-sheet">
+  <!-- Header Image -->
+  <div class="share-image mb-6">
+    <img [src]="dataPng" alt="Share" class="w-full max-w-md mx-auto">
+  </div>
+
+  <!-- Share Title -->
+  <h2 class="text-xl font-semibold mb-6 text-center">{{'ShareCalendar' | translate}}</h2>
+  
+  <!-- Share Instructions -->
+  <div class="flex flex-col items-center gap-3 mb-6">
+    <div class="flex items-start gap-2 max-w-xs">
+      <span class="text-primary mt-1">•</span>
+      <p class="text-sm text-gray-600">
+        {{'ShareLinkedinDesc' | translate}}
+      </p>
+    </div>
+    <div class="flex items-start gap-2 max-w-xs">
+      <span class="text-primary mt-1">•</span>
+      <p class="text-sm text-gray-600">
+        {{'ShareXDesc' | translate}}
+      </p>
+    </div>
+  </div>
+
+  <!-- Share Options -->
+  <div class="share-options">
+    <!-- Download -->
+    <button mat-button class="share-button download" (click)="downloadCalendar()">
+      <ng-icon name="tablerDownload"></ng-icon>
+      <span>{{'Download' | translate}}</span>
+    </button>
+
+    <!-- Copy to Clipboard -->
+    <button mat-button class="share-button copy" (click)="copyCalendar()">
+      <ng-icon name="tablerCopy"></ng-icon>
+      <span>{{'Copy' | translate}}</span>
+    </button>
+
+    <!-- Twitter/X -->
+    <button mat-button class="share-button twitter" (click)="shareOnTwitter()">
+      <ng-icon name="simpleX"></ng-icon>
+      <span>{{'ShareX' | translate}}</span>
+    </button>
+
+    <!-- LinkedIn -->
+    <button mat-button class="share-button linkedin" (click)="shareOnLinkedIn()">
+      <ng-icon name="simpleLinkedin"></ng-icon>
+      <span>{{'ShareLinkedIn' | translate}}</span>
+    </button>
+  </div>
+</div>

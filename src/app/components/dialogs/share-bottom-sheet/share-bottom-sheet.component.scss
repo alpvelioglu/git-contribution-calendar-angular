@@ -1,0 +1,61 @@
+.share-bottom-sheet {
+  padding: 16px;
+  
+  .share-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+    .header-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .share-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .share-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .share-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 8px;
+      width: 100%;
+
+      &.linkedin {
+        background-color: #0077b5;
+        color: white;
+      }
+
+      &.twitter {
+        background-color: #000000;
+        color: white;
+      }
+
+      &.download {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      &.copy {
+        background-color: #4771c5;
+        color: white;
+      }
+
+      mat-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+} 

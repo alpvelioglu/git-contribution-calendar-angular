@@ -1,0 +1,12 @@
+{
+    "/rest/": {
+      "target": "YOUR_BITBUCKET_URL",
+      "secure": false,
+      "changeOrigin": true
+    },
+    "/plugins/servlet/": {
+      "target": "YOUR_BITBUCKET_URL",
+      "secure": false,
+      "changeOrigin": true
+    }
+}

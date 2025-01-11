@@ -1,0 +1,96 @@
+<div class="mx-auto flex justify-center items-center mb-8">
+  <h4 class="text-4xl font-medium">{{'GitContributionCalendar' | translate}}</h4>
+</div>
+
+<div class="mx-auto flex justify-center items-center">
+  <section>
+    <h3 class="text-center">{{ 'SelectProviders' | translate }}</h3>
+    <mat-button-toggle-group
+      name="providers"
+      aria-label="providers"
+      [hideMultipleSelectionIndicator]="true"
+      multiple
+      (change)="onProviderSelection($event.source)"
+    >
+      <mat-button-toggle [value]="providers.GitHub" class="flex items-center justify-center">
+        <ng-icon name="ionLogoGithub" class="relative top-[2px]"></ng-icon>&nbsp;{{ providers.GitHub }}
+      </mat-button-toggle>
+      <mat-button-toggle [value]="providers.Bitbucket" class="flex items-center justify-center">
+        <ng-icon name="ionLogoBitbucket" class="relative top-[2px]"></ng-icon>&nbsp;{{ providers.Bitbucket }}
+      </mat-button-toggle>
+      <mat-button-toggle [disabled]="true" [value]="providers.Gitlab" class="flex items-center justify-center">
+        <ng-icon name="ionLogoGitlab" class="relative top-[2px]"></ng-icon>&nbsp;{{ providers.Gitlab }}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </section>
+</div>
+
+<div id="calendar-container">
+  <div class="contribution-calendar mx-auto w-full max-w-5xl px-24 mt-12">
+    <div class="flex justify-between items-center mb-3">
+      <!-- Filter buttons -->
+      <div id="calendar-filter" class="space-x-2 ml-8">
+        @if(isGithub) {
+          <button (click)="onProviderFilterChange($event)" mat-flat-button>
+            <mat-icon>{{ isGithubVisible ? 'visibility' : 'visibility_off' }}</mat-icon>
+            {{ providers.GitHub }}
+          </button>
+        }
+        @if(isBitbucket) {
+          <button (click)="onProviderFilterChange($event)" mat-flat-button>
+            <mat-icon>{{ isBitbucketVisible ? 'visibility' : 'visibility_off' }}</mat-icon>
+            {{ providers.Bitbucket }}
+          </button>
+        }
+      </div>
+
+      <!-- User info -->
+      @if(isGithub || isBitbucket) {
+        <div id="user-info" class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2">
+            <img [src]="sharedService.preferedDisplay()?.avatarUrl" alt="GitHub Avatar" class="w-8 h-8 rounded-full">
+            <div class="text-sm">
+              <div class="font-medium">{{ sharedService.preferedDisplay()?.displayName }}</div>
+              <div class="text-gray-600">{{'GitContrubutionYear' | translate:{year: 2024} }}</div>
+            </div>
+          </div>
+          <button (click)="openUserSettingsDialog()" mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </div>
+      }
+    </div>
+
+  </div>
+
+  @if(calendarDays().length > 0)
+  {
+    <div id="calendar-stats" class="mx-auto flex justify-center items-center mt-6 space-x-16">
+      <app-git-stats
+        [title]="totalContributions().toString() + ' ' + ('Total' | translate)"
+        [description]="'GitContrubutionYear' | translate:{year: 2024}"
+        [details]="(tempStaticDate() | async)?.startDate + ' - ' + (tempStaticDate() | async)?.endDate"
+      ></app-git-stats>
+      @if (maxActivities() | async; as maxAct) {
+        <app-git-stats
+          [title]="maxAct.maxActivity.toString() + ' ' + ('Activities' | translate)"
+          [description]="'GitMaxContrubutionDay' | translate"
+          [details]="maxAct.dayOfMaxActivity || ''"
+        ></app-git-stats>
+      }
+      @if (longestStreak() | async; as streak) {
+        <app-git-stats
+          [title]="streak.streak.toString() + ' ' + ('DaysLabel' | translate)"
+          [description]="'LongestStreak' | translate"
+          [details]="streak.startDate + ' - ' + streak.endDate"
+        ></app-git-stats>
+      }
+    </div>
+  }
+</div>
+
+
+
+
+
+<app-floating-menu></app-floating-menu>

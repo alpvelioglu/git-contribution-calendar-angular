@@ -1,0 +1,39 @@
+<div class="fixed top-1/2 left-4 transform -translate-y-1/2 flex flex-col space-y-4">
+  <!-- Share Button -->
+  <div class="relative flex justify-start">
+    <button
+      (click)="openShareSheet()"
+      [disabled]="isLoading"
+      class="flex items-center justify-start bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white p-3 rounded-full shadow-lg w-12 h-12 transition-all duration-300 hover:w-32 group overflow-hidden disabled:opacity-75 disabled:cursor-wait">
+      <mat-icon class="!w-6 !h-6 absolute left-3" [class.animate-spin]="isLoading">
+        {{isLoading ? 'autorenew' : 'share'}}
+      </mat-icon>
+      <span class="absolute right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        {{isLoading ? ('Loading' | translate) : 'Share' | translate}}
+      </span>
+    </button>
+  </div>
+
+  <!-- About Button -->
+  <div class="relative flex justify-start">
+    <button
+      (click)="openAboutDialog()"
+      class="flex items-center justify-start bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white p-3 rounded-full shadow-lg w-12 h-12 transition-all duration-300 hover:w-32 group overflow-hidden">
+      <mat-icon class="!w-6 !h-6 absolute left-3">info</mat-icon>
+      <span class="absolute right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        {{ 'About' | translate }}
+      </span>
+    </button>
+  </div>
+
+  <!-- Language Button -->
+  <div class="relative flex justify-start">
+    <button
+      (click)="switchLanguage()"
+      class="flex items-center justify-start bg-gradient-to-r from-gray-400 to-gray-600 hover:from-gray-500 hover:to-gray-700 text-white p-3 rounded-full shadow-lg w-12 h-12">
+      <span class="absolute left-3 text-lg">
+        <img [src]="'https://flagcdn.com/' + languages[languageIndex].code + '.svg'" alt="Language Flag" class="w-6 h-6">
+      </span>
+    </button>
+  </div>
+</div>

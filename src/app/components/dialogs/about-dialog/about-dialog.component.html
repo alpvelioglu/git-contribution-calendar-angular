@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{'About' | translate}}</h2>
+<mat-dialog-content>
+    <p class="mb-4">{{'AboutOne' | translate}}</p>
+    <p [innerHTML]="'AboutTwo' | translate | safeHtml" class="mb-4"></p>
+    <p class="mb-2">{{'AboutThree' | translate}}</p>
+    <div class="flex gap-4 items-center">
+        <a href="https://www.linkedin.com/in/alp-eren-velioglu2000" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600" title="LinkedIn">
+            <ng-icon name="simpleLinkedin" class="w-6 h-6"></ng-icon>
+        </a>
+        <a href="mailto:aeren53.ae@gmail.com" class="text-gray-600 hover:text-blue-600" title="Email">
+            <ng-icon name="simpleGmail" class="w-6 h-6"></ng-icon>
+        </a>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close class="mt-4 py-2 px-4 rounded">{{'Close' | translate}}</button>
+</mat-dialog-actions>
+<div class="absolute bottom-4 left-6 text-xs text-gray-500">
+    {{'VersionInfo' | translate:{appV:'1.0.0', angularV: angularVersion} }}
+</div>

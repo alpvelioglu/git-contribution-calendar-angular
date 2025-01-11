@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{'UserSettings' | translate}}</h2>
+<mat-dialog-content>
+    <p>{{'UserSettingsDescription' | translate}}</p>
+    
+    <div style="display: flex; gap: 16px;">
+        <mat-form-field>
+            <mat-label>{{'DisplayName' | translate}}</mat-label>
+            <mat-select [value]="sharedService.preferedDisplay()?.displayName" (selectionChange)="onDisplayNameChange($event)">
+                @for (displayName of concatList(); track $index) {
+                    <mat-option [value]="displayName">{{ displayName }}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Avatar</mat-label>
+            <mat-select [value]="sharedService.preferedDisplay()?.avatarUrl" (selectionChange)="onAvatarChange($event)">
+                @for (avatar of avatarList(); track $index) {
+                    <mat-option [value]="avatar.avatarUrl">{{'AvatarValue' | translate:{provider: avatar.provider} }}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">{{'Cancel' | translate}}</button>
+    <button mat-button [mat-dialog-close]="data" color="primary">{{'Save' | translate}}</button>
+</mat-dialog-actions>
+
+

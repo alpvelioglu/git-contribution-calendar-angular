@@ -1,0 +1,5 @@
+:root {
+    --mat-form-field-filled-label-display: block;
+    --mat-form-field-filled-with-label-container-padding-top: 16px;
+    --mat-form-field-filled-with-label-container-padding-bottom: 0px;
+  }

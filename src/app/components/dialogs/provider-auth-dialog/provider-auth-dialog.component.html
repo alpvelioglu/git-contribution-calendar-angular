@@ -1,0 +1,77 @@
+<h2 mat-dialog-title>{{'AuthenticationTitle' | translate:{provider: data.provider} }}</h2>
+<mat-dialog-content class="mat-typography">
+  @if(data.provider === providers.GitHub)
+  {
+    <mat-card class="info-badge">
+      <mat-card-title>{{'TokenCreationTitle' | translate:{provider: data.provider} }}</mat-card-title>
+      <mat-card-content style="padding: 3px;">
+        <p class="mat-body-1">{{'StepsDescription' | translate:{provider: data.provider} }}</p>
+        <ol>
+          <li [innerHTML]="'GitStepsOne' | translate:{provider:data.provider} | safeHtml"></li>
+          <li>{{'GitStepsTwo' | translate }}</li>
+          <li>{{'GitStepsThree' | translate}}</li>
+          <li>{{'StepsFour' | translate}}</li>
+          <li [innerHTML]="'GitStepsFive' | translate | safeHtml"></li>
+          <li>{{'StepsSix' | translate}}</li>
+          <li>{{'StepsSeven' | translate}}</li>
+        </ol>
+      </mat-card-content>
+   </mat-card>
+  }
+  @else if (data.provider === providers.Bitbucket) 
+  {
+    <mat-card class="warn-badge">
+      <mat-card-title [innerHTML]="'Warning' | translate"></mat-card-title>
+      <mat-card-content style="padding: 3px;">
+        <p [innerHTML]="'BitbucketWarning' | translate | safeHtml"></p>
+      </mat-card-content>
+    </mat-card>
+
+    <p>{{'BitbucketBaseUrl' | translate}}</p>
+    <mat-form-field class="w-96">
+      <mat-label>URL</mat-label>
+      <input class="w-20" placeholder="https://your-bitbucket-server.domain" matInput [(ngModel)]="baseUrl"/>
+    </mat-form-field>
+    <br>
+    <!-- <p>Username</p> -->
+    <mat-form-field class="w-96">
+      <mat-label>{{'Username' | translate}}</mat-label>
+      <input matInput [(ngModel)]="username"/>
+    </mat-form-field>
+
+    <mat-card class="info-badge">
+      <mat-card-title>{{'TokenCreationTitle' | translate:{provider: data.provider} }}</mat-card-title>
+      <mat-card-content style="padding: 3px;">
+        <p class="mat-body-1">{{'StepsDescription' | translate:{provider:data.provider} }}</p>
+        <ol>
+          <li>
+            <a 
+              [attr.href]="!isEmpty(username()) && !isEmpty(baseUrl()) ? bitbucketTokenPage() : null"
+              [attr.target]="!isEmpty(username()) && !isEmpty(baseUrl()) ? '_blank' : null"
+              [style.pointer-events]="(isEmpty(username()) || isEmpty(baseUrl())) ? 'none' : 'auto'"
+              style="color: rgb(255, 123, 0); font-weight: bold;"
+              [innerHTML]="'BitbucketStepsOne' | translate:{provider: data.provider} | safeHtml">
+            >
+            </a>.
+          </li>
+          <li>{{'BitbucketStepsTwo' | translate}}</li>
+          <li>{{'StepsFour' | translate}}</li>
+          <li [innerHTML]="'BitbucketStepsThree' | translate | safeHtml"></li>
+          <li>{{'StepsSix' | translate}}</li>
+          <li>{{'StepsSeven' | translate}}</li>
+        </ol>
+      </mat-card-content>
+    </mat-card>
+  }
+  
+  <p>{{'ProvideAPIKey' | translate:{provide: data.provider} }}</p>
+  <mat-form-field class="w-96">
+    <mat-label>{{'APIKey' | translate}}</mat-label>
+    <input matInput [value]="apiKey()" readonly />
+    <button [disabled]="isEmpty(username()) && isEmpty(baseUrl()) && data.provider === providers.Bitbucket" mat-button matSuffix (click)="clipboardPaste()">{{'PasteFrom' | translate}}</button>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">{{'Close' | translate}}</button>
+  <button [disabled]="isEmpty(data.username)" mat-button [mat-dialog-close]="data">{{'Ok' | translate}}</button>
+</mat-dialog-actions>
