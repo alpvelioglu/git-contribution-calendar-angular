@@ -49,7 +49,6 @@ export class ProviderAuthDialogComponent {
 
   username = model<string>('');
   bitbucketTokenPage = computed(() => `${this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl() }/plugins/servlet/access-tokens/users/${this.username()}/manage`);
-  baseUrlConfig = computed(() => this.configService.set(Providers.Bitbucket, this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl()));
 
   githubService = inject(GithubService);
   bitbucketService = inject(BitbucketService);
@@ -86,6 +85,7 @@ export class ProviderAuthDialogComponent {
       }
       else if(this.data.provider == Providers.Bitbucket)
       {
+        this.configService.set(Providers.Bitbucket, this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl());
         this.bitbucketService.getUser(clipboardText, this.username()).subscribe({
           next: (data) => {
             this.data.username = data.name;
@@ -93,7 +93,6 @@ export class ProviderAuthDialogComponent {
             this.data.apiKey = clipboardText;
             this.data.avatarUrl = data.avatarUrl;
             this.data.displayName = data.displayName;
-            this.configService.set(Providers.Bitbucket, this.baseUrl().endsWith('/') ? this.baseUrl().slice(0, -1) : this.baseUrl());
           },
           error: (error) => {
             var errText = this.translateService.instant('UserError', {provider: this.providers.Bitbucket, errMessage: error.statusText});
