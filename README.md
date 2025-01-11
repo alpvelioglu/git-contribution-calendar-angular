@@ -9,7 +9,7 @@
 
 <br /> -->
 <div align="center">
-  <a href="https://github.com/alperen_velioglu/git-contribution-calendar">
+  <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular">
     <img src="images/gcclogo.png" alt="Logo" width="150" height="150">
   </a>
 
@@ -19,11 +19,11 @@
     A modern web application that visualizes your git contributions across multiple platforms (GitHub, Bitbucket) in a unified calendar view.
     <br />
     <br />
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar">View Demo</a>
+    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular">View Demo</a>
     ·
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar/issues">Report Bug</a>
+    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar/issues">Request Feature</a>
+    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues">Request Feature</a>
   </p>
 </div>
 
@@ -69,7 +69,7 @@ To get a local copy up and running, follow these steps:
    
 1. Clone the repo
    ```sh
-   git clone https://github.com/alperen_velioglu/git-contribution-calendar.git
+   git clone https://github.com/alperen_velioglu/git-contribution-calendar-angular.git
    ```
 2. Install NPM packages
    ```sh
@@ -111,7 +111,7 @@ To get a local copy up and running, follow these steps:
 - [ ] Custom Date Range Selection
 - [ ] Dark Theme
 
-See the [open issues](https://github.com/alperen_velioglu/git-contribution-calendar/issues) for a full list of proposed features and known issues.
+See the [open issues](https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues) for a full list of proposed features and known issues.
 
 ## Contributing
 
@@ -131,7 +131,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 aeren53.ae@gmail.com
 
-Project Link: [https://github.com/alperen_velioglu/git-contribution-calendar](https://github.com/alperen_velioglu/git-contribution-calendar)
+Project Link: [https://github.com/alperen_velioglu/git-contribution-calendar-angular](https://github.com/alperen_velioglu/git-contribution-calendar-angular)
 
 ## Acknowledgments
 
@@ -143,16 +143,16 @@ Project Link: [https://github.com/alperen_velioglu/git-contribution-calendar](ht
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/alperen_velioglu/git-contribution-calendar.svg?style=for-the-badge
-[contributors-url]: https://github.com/alperen_velioglu/git-contribution-calendar/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alperen_velioglu/git-contribution-calendar.svg?style=for-the-badge
-[forks-url]: https://github.com/alperen_velioglu/git-contribution-calendar/network/members
-[stars-shield]: https://img.shields.io/github/stars/alperen_velioglu/git-contribution-calendar.svg?style=for-the-badge
-[stars-url]: https://github.com/alperen_velioglu/git-contribution-calendar/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alperen_velioglu/git-contribution-calendar.svg?style=for-the-badge
-[issues-url]: https://github.com/alperen_velioglu/git-contribution-calendar/issues
-[license-shield]: https://img.shields.io/github/license/alperen_velioglu/git-contribution-calendar.svg?style=for-the-badge
-[license-url]: https://github.com/alperen_velioglu/git-contribution-calendar/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[contributors-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[forks-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/network/members
+[stars-shield]: https://img.shields.io/github/stars/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[stars-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[issues-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues
+[license-shield]: https://img.shields.io/github/license/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[license-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/your_linkedin_username
 [product-screenshot]: public/assets/screenshot.png
