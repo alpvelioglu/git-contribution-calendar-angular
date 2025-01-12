@@ -3,6 +3,7 @@ import { inject, Injectable, isDevMode } from '@angular/core';
 import { map } from 'rxjs';
 import { Providers } from '../enums/providers';
 import { ConfigService } from './config.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,19 @@ export class BitbucketService {
   configService = inject(ConfigService);
 
   getContributions(bitbucketApiKey: string, username: string) {
+    return this.httpClient.post<Response>(`${environment.backendUrl}/gitcontributions`, {
+      baseURL: this.configService.get(Providers.Bitbucket),
+      bitbucketAPIKey: bitbucketApiKey,
+      username: username
+    });
+  }
+
+  // If you are running the app in development mode, and don't want to run .NET Backend, you need to use proxy.conf.json to avoid CORS issues
+  getContributionsProxy(bitbucketApiKey: string, username: string) {
     const start = new Date('2024-01-01');
     const end = new Date('2024-12-31');
     const endpoint = `/rest/awesome-graphs/latest/user/activities/${username}?from=2024-01-01&to=2024-12-31`;
 
-    // If you are running the app in development mode, you need to use proxy.conf.json to avoid CORS issues
-    // That's why in development mode, we are using the proxy URL
     var url = isDevMode() ? endpoint : this.configService.get(Providers.Bitbucket) + endpoint;
     return this.httpClient
       .get<any>(url,
@@ -47,7 +55,7 @@ export class BitbucketService {
       );
   }
 
-  getUser(bitbucketApiKey: string, username: string) {
+  getUserProxy(bitbucketApiKey: string, username: string) {
     var url = isDevMode() ? `/rest/api/latest/users/${username}?avatarSize=64` : this.configService.get(Providers.Bitbucket) + `/rest/api/latest/users/${username}?avatarSize=64`;
     return this.httpClient.get(url, {
       headers: { Authorization: `Bearer ${bitbucketApiKey}` }
