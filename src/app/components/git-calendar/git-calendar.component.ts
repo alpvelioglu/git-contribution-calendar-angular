@@ -519,7 +519,7 @@ export class GitCalendarComponent {
         {
           this.bitbucketService.getContributions(result.apiKey, result.username).subscribe({
             next: (data) => {
-              this.bitbucketContributions.set(data.map((contribution) => ({
+              this.bitbucketContributions.set(data.map((contribution: any) => ({
                   //provider: Providers.Bitbucket,
                   date: new Date(contribution.date),
                   contributionCount: contribution.contributionCount,
