@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
     runWithBackend: true,
-    backendUrl: 'https://localhost:7134',
+    backendUrl: 'http://localhost:8090',
     bitbucket: 'YOUR_BITBUCKET_URL'
 };

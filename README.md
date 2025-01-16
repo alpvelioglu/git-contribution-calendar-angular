@@ -8,22 +8,23 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br /> -->
+<a id="readme-top"></a>
 <div align="center">
-  <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular">
+  <a href="https://github.com/alpvelioglu/git-contribution-calendar-angular">
     <img src="images/gcclogo.png" alt="Logo" width="150" height="150">
   </a>
 
 <h3 align="center">Git Contribution Calendar</h3>
 
   <p align="center">
-    A modern web application that visualizes your git contributions across multiple platforms (GitHub, Bitbucket) in a unified calendar view.
+    A modern web application that visualizes your git contributions across multiple providers (GitHub, Bitbucket) in a unified calendar view.
     <br />
     <br />
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular">View Demo</a>
+    <a href="https://github.com/alpvelioglu/git-contribution-calendar-angular">View Demo</a>
     ·
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues">Report Bug</a>
+    <a href="https://github.com/alpvelioglu/git-contribution-calendar-angular/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues">Request Feature</a>
+    <a href="https://github.com/alpvelioglu/git-contribution-calendar-angular/issues">Request Feature</a>
   </p>
 </div>
 
@@ -31,7 +32,13 @@
 
 ![Git Contribution Calendar Screen Shot](images/product-screenshot.png)
 
-Git Contribution Calendar is a powerful tool that aggregates and visualizes your git contributions from multiple platforms. Whether you're using GitHub, Bitbucket, or both, this application provides a unified view of your coding activity throughout the year.
+Git Contribution Calendar is a powerful tool that aggregates and visualizes your git contributions from multiple providers. Whether you're using GitHub, Bitbucket, or both, this application provides a unified view of your coding activity throughout the year.
+
+**Note:**
+* If you need VPN connection to access Bitbucket, you have to use <a href="https://github.com/alpvelioglu/git-contribution-calendar-ext">git-contribution-calendar-ext</a>
+  - It uses browser cookies to authenticate and access Bitbucket so you don't need to use Bitbucket access token if you login with Bitbucket account in the browser before using the extension.
+* If you don't need VPN connection, you can use <a href="https://github.com/alpvelioglu/git-contribution-calendar-angular">git-contribution-calendar-angular</a>
+  - It uses .NET Minimal API to access Bitbucket. See more details in the <a href="https://github.com/alpvelioglu/GitContributionCalendar.MinimalAPI">GitContributionCalendar.MinimalAPI</a> repository.
 
 Key Features:
 * Multi-provider support (GitHub and Bitbucket integration)
@@ -69,7 +76,7 @@ To get a local copy up and running, follow these steps:
    
 1. Clone the repo
    ```sh
-   git clone https://github.com/alperen_velioglu/git-contribution-calendar-angular.git
+   git clone https://github.com/alpvelioglu/git-contribution-calendar-angular.git
    ```
 2. Install NPM packages
    ```sh
@@ -90,6 +97,7 @@ To get a local copy up and running, follow these steps:
         }
     }
    ```
+4. In alternative way for proxy.conf.json, you can run this app with .NET backend from the repository [Git Contribution Calendar Minimal API](https://github.com/alpvelioglu/GitContributionCalendar.MinimalAPI).
 
 ## Usage
 
@@ -110,8 +118,10 @@ To get a local copy up and running, follow these steps:
 - [ ] GitLab Integration
 - [ ] Custom Date Range Selection
 - [ ] Dark Theme
+- [ ] Fixing color schema with dynamic colors
+- [ ] Better UI
 
-See the [open issues](https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues) for a full list of proposed features and known issues.
+See the [open issues](https://github.com/alpvelioglu/git-contribution-calendar-angular/issues) for a full list of proposed features and known issues.
 
 ## Contributing
 
@@ -131,7 +141,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 aeren53.ae@gmail.com
 
-Project Link: [https://github.com/alperen_velioglu/git-contribution-calendar-angular](https://github.com/alperen_velioglu/git-contribution-calendar-angular)
+Project Link: [https://github.com/alpvelioglu/git-contribution-calendar-angular](https://github.com/alpvelioglu/git-contribution-calendar-angular)
 
 ## Acknowledgments
 
@@ -143,16 +153,16 @@ Project Link: [https://github.com/alperen_velioglu/git-contribution-calendar-ang
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
-[contributors-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
-[forks-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/network/members
-[stars-shield]: https://img.shields.io/github/stars/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
-[stars-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
-[issues-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/issues
-[license-shield]: https://img.shields.io/github/license/alperen_velioglu/git-contribution-calendar-angular.svg?style=for-the-badge
-[license-url]: https://github.com/alperen_velioglu/git-contribution-calendar-angular/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/alpvelioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[contributors-url]: https://github.com/alpvelioglu/git-contribution-calendar-angular/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alpvelioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[forks-url]: https://github.com/alpvelioglu/git-contribution-calendar-angular/network/members
+[stars-shield]: https://img.shields.io/github/stars/alpvelioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[stars-url]: https://github.com/alpvelioglu/git-contribution-calendar-angular/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alpvelioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[issues-url]: https://github.com/alpvelioglu/git-contribution-calendar-angular/issues
+[license-shield]: https://img.shields.io/github/license/alpvelioglu/git-contribution-calendar-angular.svg?style=for-the-badge
+[license-url]: https://github.com/alpvelioglu/git-contribution-calendar-angular/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/your_linkedin_username
 [product-screenshot]: public/assets/screenshot.png
