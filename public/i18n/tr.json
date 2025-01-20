@@ -2,7 +2,7 @@
 	"About": "Hakkında",
 	"AboutOne": "Bu uygulama, birden fazla Git sağlayıcısından gelen katkıları basit bir şekilde görselleştirmenize yardımcı olur.",
 	"AboutThree": "Herhangi bir sorunuz için, şu yollarla iletişime geçebilirsiniz:",
-	"AboutTwo": "Uygulama, <a href=\"https://github.com/your-repo-link\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #3b82f6; text-decoration: none;\" onmouseover=\"this.style.textDecoration='underline'\" onmouseout=\"this.style.textDecoration='none'\">GitHub</a> üzerinde paylaşılan açık kaynaklı bir proje. Katkıda bulunabilirsiniz! Pull request gönderebilir, sorun bildirebilir, yeni özellikler önerebilir veya yakında gelecek güncellemelerin yol haritasını inceleyebilirsiniz.",
+	"AboutTwo": "Uygulama, <a href=\"https://github.com/alpvelioglu/git-contribution-calendar-angular\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #3b82f6; text-decoration: none;\" onmouseover=\"this.style.textDecoration='underline'\" onmouseout=\"this.style.textDecoration='none'\">GitHub</a> üzerinde paylaşılan açık kaynaklı bir proje. Katkıda bulunabilirsiniz! Pull request gönderebilir, sorun bildirebilir, yeni özellikler önerebilir veya yakında gelecek güncellemelerin yol haritasını inceleyebilirsiniz.",
 	"Activities": "Aktivite",
 	"APIKey": "API Anahtarı",
 	"AreYouSure": "Emin misiniz?",

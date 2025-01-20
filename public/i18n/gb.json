@@ -2,7 +2,7 @@
 	"About": "About",
 	"AboutOne": "This app helps you visualize Git contributions from multiple providers in a simple way.",
 	"AboutThree": "For any inquiries, you can reach out via:",
-	"AboutTwo": "It's an open-source project hosted on \n        <a href=\"https://github.com/your-repo-link\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #3b82f6; text-decoration: none;\" onmouseover=\"this.style.textDecoration='underline'\" onmouseout=\"this.style.textDecoration='none'\">\n            GitHub.\n        </a> Contributions are welcome! Feel free to submit pull requests, report issues, suggest features, or explore the roadmap for upcoming updates.",
+	"AboutTwo": "It's an open-source project hosted on \n        <a href=\"https://github.com/alpvelioglu/git-contribution-calendar-angular\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #3b82f6; text-decoration: none;\" onmouseover=\"this.style.textDecoration='underline'\" onmouseout=\"this.style.textDecoration='none'\">\n            GitHub.\n        </a> Contributions are welcome! Feel free to submit pull requests, report issues, suggest features, or explore the roadmap for upcoming updates.",
 	"Activities": "Activities",
 	"APIKey": "API Key",
 	"AreYouSure": "Are you sure?",
