@@ -8,5 +8,10 @@
       "target": "YOUR_BITBUCKET_URL",
       "secure": false,
       "changeOrigin": true
+    },
+    "/backend/": {
+      "target": "http://157.230.121.247:8090",
+      "secure": false,
+      "changeOrigin": true
     }
 }
