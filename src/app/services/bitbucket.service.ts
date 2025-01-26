@@ -14,7 +14,7 @@ export class BitbucketService {
   configService = inject(ConfigService);
 
   getContributions(bitbucketApiKey: string, username: string) {
-    return this.httpClient.post<any>(`/backend/getcontributions`, {
+    return this.httpClient.post<any>(`${environment.backendUrl}/getcontributions`, {
       baseURL: this.configService.get(Providers.Bitbucket),
       bitbucketAPIKey: bitbucketApiKey,
       username: username
@@ -22,7 +22,7 @@ export class BitbucketService {
   }
 
   getUser(bitbucketApiKey: string, username: string) {
-    return this.httpClient.post<any>(`/backend/getuser`, {
+    return this.httpClient.post<any>(`${environment.backendUrl}/getuser`, {
       baseURL: this.configService.get(Providers.Bitbucket),
       bitbucketAPIKey: bitbucketApiKey,
       username: username
